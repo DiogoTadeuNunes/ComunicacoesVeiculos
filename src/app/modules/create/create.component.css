@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import url("http://ec2-18-228-30-159.sa-east-1.compute.amazonaws.com/veiculos_comunication/assets/fonts/itau_display/stylesheet.css");
+
+h1 {
+    text-align:center;
+}

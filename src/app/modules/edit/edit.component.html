@@ -1,0 +1,20 @@
+<h1>Edição de Comunicado</h1>
+
+<div>
+  * Título:<br />
+  <input type="text" [(ngModel)]="post.title" style="width:600px;">
+</div>
+  
+<div>
+  * Texto do comunidado:<br />
+  <ejs-richtexteditor #toolsRTE id='alltoolRTE' width="600px" height="600px"
+    [(value)]="post.content"
+    [toolbarSettings]='toolbarSettings'
+    [fontFamily]='fontFamily'
+    [fontColor]='fontColor'
+  ></ejs-richtexteditor>
+</div>
+
+<div>
+  <button type="submit" (click)="onSubmit()">Salvar Notificação</button>
+</div>

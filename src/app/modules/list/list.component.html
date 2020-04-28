@@ -1,0 +1,22 @@
+<div>
+    Digite a data inicial
+    <input type="date" [ngModel] ="initialDate | date:'yyyy-MM-dd'">
+    <button type="submit" (click)="getPosts()">Buscar</button>
+</div>
+
+<div>
+    <table>
+    <tr>
+        <th>Criação</th>
+        <th>Título</th>
+    </tr>
+    <tr *ngFor="let post of posts; let i = index">
+        <td>{{ this.helper.getFormatDate(post.createdAt, 'dd/MM/yyyy') }}</td>
+        <td>{{ post.title }}</td>
+        <td>
+            <button (click)="onEdit(post.id)">Editar</button>
+            <button (click)="onDelete(post.id, post.projectKey)">Excluir</button>
+        </td>
+    </tr>
+    </table>
+</div>
